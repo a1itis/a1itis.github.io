@@ -471,7 +471,7 @@
   ];
 
   function getRandomExcuse() {
-    return randomExcuses[Math.round(Math.random() * randomExcuses.length)];
+    return randomExcuses[Math.round(Math.random() * randomExcuses.length /1)];
   }
 
   $.fn.fadeTo = function (target) {
@@ -484,16 +484,16 @@
 
   $(document).keyup(function (k) {
     if (k.keyCode == 32) {
-      $("h1").fadeTo(getRandomExcuse());
+      $("h3").fadeTo(getRandomExcuse());
     }
   });
 
 
-  $("h1").fadeTo(getRandomExcuse());
+  $("h3").fadeTo(getRandomExcuse());
 
   window.setInterval(function () {
-    $("h1").fadeTo(getRandomExcuse());
-  }, 5000);
+    $("h3").fadeTo(getRandomExcuse());
+  }, 6000);
 
 
   function getRandomExcuse() {
@@ -511,15 +511,15 @@
 
   $(document).keyup(function (k) {
     if (k.keyCode == 32) {
-      $("h3").fadeTo(getRandomExcuse());
+      $("h4").fadeTo(getRandomExcuse());
     }
   });
 
 
-  $("h3").fadeTo(getRandomExcuse());
+  $("h4").fadeTo(getRandomExcuse());
 
   window.setInterval(function () {
-    $("h3").fadeTo(getRandomExcuse());
-  }, 5000);
+    $("h4").fadeTo(getRandomExcuse());
+  }, 6000);
 
 })(jQuery);
