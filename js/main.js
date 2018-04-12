@@ -495,6 +495,20 @@
     $("h1").fadeTo(getRandomExcuse());
   }, 5000);
 
+
+  function getRandomExcuse() {
+    return randomExcuses[Math.round(Math.random() * randomExcuses.length /2)];
+  }
+
+  $.fn.fadeTo = function (target) {
+    var e = $(this);
+    e.fadeOut(300, "swing", function () {
+      e.html(target);
+      e.fadeIn(200, "swing");
+    })
+  };
+
+
   $(document).keyup(function (k) {
     if (k.keyCode == 32) {
       $("h3").fadeTo(getRandomExcuse());
